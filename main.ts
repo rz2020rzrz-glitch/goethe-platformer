@@ -15,7 +15,7 @@ let _player: Sprite = null
 scene.setBackgroundImage(assets.image`myImage0`)
 _player = sprites.create(assets.image`myImage`, SpriteKind.Player)
 controller.moveSprite(_player, 90, 0)
-tiles.setCurrentTilemap(tilemap`level`)
+tiles.setCurrentTilemap(tilemap`level1`)
 _player.setFlag(SpriteFlag.ShowPhysics, true)
 scene.cameraFollowSprite(_player)
 _player.ay = 500
@@ -37,7 +37,7 @@ let foe = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
-foe.follow(_player, 40)
+foe.follow(_player, 50)
 game.onUpdate(function () {
     if (_player.isHittingTile(CollisionDirection.Bottom)) {
         jumpstate = 0
