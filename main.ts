@@ -18,6 +18,7 @@ function loadLevel (level: number) {
     }
 }
 let jumpstate = 0
+let level = 0
 let _player: Sprite = null
 scene.setBackgroundImage(assets.image`myImage0`)
 _player = sprites.create(assets.image`myImage`, SpriteKind.Player)
@@ -45,7 +46,6 @@ let foe = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 foe.follow(_player, 40)
-let level = 0
 loadLevel(level)
 game.onUpdate(function () {
     if (_player.isHittingTile(CollisionDirection.Bottom)) {
