@@ -37,7 +37,7 @@ let foe = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
-foe.follow(_player, 50)
+foe.follow(_player, 40)
 game.onUpdate(function () {
     if (_player.isHittingTile(CollisionDirection.Bottom)) {
         jumpstate = 0
